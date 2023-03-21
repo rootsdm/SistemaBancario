@@ -67,6 +67,12 @@ public final class Account {
 		return balance;
 	}
 
+	public double loan(Account destinationAccount, double value) {
+		balance += value;
+		return balance;
+
+	}
+
 	public Account() {
 
 	}

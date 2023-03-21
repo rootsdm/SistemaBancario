@@ -71,4 +71,18 @@ public class ServiceAccount {
 
 	}
 
+	
+	public void checkLoan(int idAccount, double value) {
+		Account account = DAO.findByIdAccount(idAccount);
+		if ((account != null)) {
+			account.loan(account, value);
+			DAO.updateAccount(account);
+			System.out.println("Empréstimo Realizado");
+
+		} else {
+			System.out.println("ERRO: Conta não existe: Emprestimo não pode ser Realizado");
+
+		}
+
+	}
 }
